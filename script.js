@@ -7,7 +7,8 @@
 
 // Global Variables go here
 var a = 0 ;// rotation angle
-var x = 0, y = 0; //sprite position
+var x = 0 ; //spiral angle
+
 
 function setup(){
   // this function will run once
@@ -18,9 +19,28 @@ function setup(){
 
 function draw(){
   // this function runs again and again (60x per second)
-  background(150); //medium gray background
-  fill(255,182, 193)
-  ellipse( width/2, height/2, 100)
+  background(204); //medium gray background
+  fill(255,165, x);// color orange
+  strokeWeight(5);// thick line
+  arc(200,200,130,200, PI,x,CHORD);//body
+  ellipse(185,120,20);// left eye
+  ellipse(210, 120,20); // right eye
+  ellipse(185,120,4);//Left pupil
+  ellipse(210,120,4);//right pupil
+  line()
+
+  
+  
+  /** step four- feet */
+
+ 
+  
+  
+  
+  
+  
+  
+
   
 
 
