@@ -6,8 +6,7 @@
  */
 
 // Global Variables go here
-var a = 0 ;// rotation angle
-var x = 0 ; //spiral angle
+var a = 0; 
 
 
 function setup(){
@@ -19,19 +18,43 @@ function setup(){
 
 function draw(){
   // this function runs again and again (60x per second)
-  background(204); //medium gray background
-  fill(255,165, x);// color orange
-  strokeWeight(5);// thick line
-  arc(200,200,130,200, PI,x,CHORD);//body
-  ellipse(185,120,20);// left eye
-  ellipse(210, 120,20); // right eye
-  ellipse(185,120,4);//Left pupil
-  ellipse(210,120,4);//right pupil
-  line()
+  background(200); //medium gray background
+  var x= 200;
+ var y =165;
 
+  fill(255,190, 200); 
+ // x= mouseX;
+ // y= mouseY; 
+
+  //left ear
+  ellipse(165,150,35, 40); //left ear
+  ellipse(235,150,35,40);// right ear
+
+  ellipse(0+x,35+ y ,125);// pig face
+
+
+  fill(255); 
+  ellipse(-25 + x,175, 25); // left eye
+  fill(0); 
+  ellipse(-25+ x,175,10); //inside of the left eye
   
-  
-  /** step four- feet */
+
+  fill(255);
+  ellipse(25 + x, 175,25);//right eye
+  fill(0)
+  ellipse(25+ x ,175,10);// inside of the right eye
+
+  fill(255,190, 200);
+  ellipse( 200,200,50,25); // pig nose
+  fill(0)
+  ellipse(190 ,200,10);// left side of inside nose
+  ellipse(210,200,10); // right side of inside nose
+
+  arc(0+x, 225,40,40,0, PI); 
+
+
+} 
+
 
  
   
@@ -53,10 +76,12 @@ function draw(){
 */
   if(mouseIsPressed){
     //check each frame to see if the mouse is pressed, then do something
-  } else {
+    fill(255,190, 200);
+  } 
+  else {
     // do something here if the mouse is NOT pressed
+    fill("blue");
   }
-}
 
 /** 
  * the mousePressed() function is separate from draw(). 
