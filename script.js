@@ -2,11 +2,12 @@
  * Project 1 - Interactive Image
  * Name: Patty Hernandez
  * Comments: geting started
- * Date: Feb 12, 2024
- */
+ * Date: Feb 25, 2024
+*/ 
 
-// Global Variables go here
-var a = 0; 
+// Global Variables go here 
+var x= 200;
+var y  =165;
 
 
 function setup(){
@@ -16,21 +17,34 @@ function setup(){
 
 }
 
-function draw(){
+function draw (){ 
   // this function runs again and again (60x per second)
   background(200); //medium gray background
-  var x= 200;
- var y =165;
-
+  
   fill(255,190, 200); 
- // x= mouseX;
- // y= mouseY; 
+  if (mouseIsPressed)
+    fill("red")
+     text("ONK ONK!", 30,150);
 
-  //left ear
-  ellipse(165,150,35, 40); //left ear
-  ellipse(235,150,35,40);// right ear
+     if (mouseIsPressed)
+    text("ONK ONK!",40,180)
+  else {
 
-  ellipse(0+x,35+ y ,125);// pig face
+  }
+  
+
+  scale (mouseX/60.0); 
+  translate(mouseX,mouseY);
+
+
+var x= 200;
+var y  =165;
+
+
+  ellipse(20+ x,150,35, 40); //left ear
+  ellipse(-20+ x,150,35,40);// right ear
+
+  ellipse(0+x,200 ,125);// pig face
 
 
   fill(255); 
@@ -45,48 +59,12 @@ function draw(){
   ellipse(25+ x ,175,10);// inside of the right eye
 
   fill(255,190, 200);
-  ellipse( 200,200,50,25); // pig nose
+  ellipse( 0+x, 200 ,50,25); // pig nose
   fill(0)
-  ellipse(190 ,200,10);// left side of inside nose
-  ellipse(210,200,10); // right side of inside nose
+  ellipse(10+x ,200,10);// left side of inside nose
+  ellipse(-10+ x,200,10); // right side of inside nose
 
   arc(0+x, 225,40,40,0, PI); 
 
 
 } 
-
-
- 
-  
-  
-  
-  
-  
-  
-
-  
-
-
-
-  
-  // add your image drawing code here
-
-/* 
-  Use the following if()...else() structure to incorporate mouse click control of your animation
-*/
-  if(mouseIsPressed){
-    //check each frame to see if the mouse is pressed, then do something
-    fill(255,190, 200);
-  } 
-  else {
-    // do something here if the mouse is NOT pressed
-    fill("blue");
-  }
-
-/** 
- * the mousePressed() function is separate from draw(). 
- * It only runs (one time) if the mouse is clicked
-*/
-function mousePressed(){
-  // add code here if you want something to execute once each time the mouse is pressed
-}
